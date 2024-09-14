@@ -1,0 +1,13 @@
+load("@rules_go//go:def.bzl", "go_binary")
+load(":defs.bzl", "json_to_yaml")
+
+go_binary(
+    name = "converter",
+    srcs = ["converter.go"],
+    visibility = ["//visibility:public"],
+    deps = ["@in_gopkg_yaml_v3//:yaml_v3"],
+)
+
+json_to_yaml(
+    name = "convert",
+)

@@ -1,0 +1,26 @@
+"""Defines the repository's Golang SDK toolchains."""
+
+go_sdk = use_extension("@rules_go//go:extensions.bzl", "go_sdk")
+
+GO_SDK_VERSION = "1.23.0"
+
+go_sdk.download(
+    goarch = "amd64",
+    goos = "linux",
+    version = GO_SDK_VERSION,
+)
+go_sdk.download(
+    goarch = "amd64",
+    goos = "darwin",
+    version = GO_SDK_VERSION,
+)
+go_sdk.download(
+    goarch = "arm64",
+    goos = "linux",
+    version = GO_SDK_VERSION,
+)
+go_sdk.download(
+    goarch = "arm64",
+    goos = "darwin",
+    version = GO_SDK_VERSION,
+)

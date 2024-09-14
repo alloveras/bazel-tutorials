@@ -1,0 +1,12 @@
+# MacOS journaling files.
+.DS_Store
+
+# IDE configurations directory.
+.vscode/
+.idea/
+
+# User-defined Bazel configuration file.
+.bazelrc.user
+
+# Bazel output directories.
+bazel-*

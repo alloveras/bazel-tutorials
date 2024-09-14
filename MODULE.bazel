@@ -1,0 +1,12 @@
+module(name = "bazel_workshops")
+
+# ================================================================================================ #
+# Rules Go
+# ================================================================================================ #
+
+bazel_dep(name = "rules_go", version = "0.50.1")
+bazel_dep(name = "gazelle", version = "0.38.0")
+
+include("//third_party/go:deps.MODULE.bazel")
+
+include("//third_party/go:toolchain.MODULE.bazel")
